@@ -14,6 +14,31 @@ a {
 .main-section {
     width: 100%;
     height: 100vh;
+    .container {
+        width: calc(100% - 250px);
+        right: 0;
+        height: 100%;
+        header {
+            width: 100%;
+            height: 60px;
+            .logo {
+                color: #222;
+                font-size: 30px;
+            }
+            button {
+                color: #fff;
+                background-color: rgb(0, 89, 255);
+                border-radius: 10px;
+                transition: .5s ease-in-out;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: gold;
+                color: #000;
+                transform: scale(1.1);
+            }
+        }
+    }
     aside {
         width: 250px;
         height: 100%;
@@ -45,7 +70,7 @@ a {
                     transform: translate(-50% , -50%);
                     width: 120px;
                     height: 40px;
-                    background-color: #ccc;
+                    color: #fff;
                 }
             }
         }
@@ -53,37 +78,38 @@ a {
             bottom: 0;
             width: 100%;
             height: calc(100% - 100px);
-            // background-color: blue;
             .part-1 {
                 width: 100%;
                 height: 200px;
-                background-color: blueviolet;
                 .title {
                     left: 50%;
                     top: 15%;
                     transform: translate(-50% , -50%);
                     width: 90%;
                     height: 20%;
-                    background-color: gold;
                     color: #777;
+                    font-size: 20px;
+                    user-select: none;
                 }
                 .category {
                     width: 100%;
                     height: 72%;
                     bottom: 0;
-                    background-color: goldenrod;
                     .option {
                         width: 100%;
-                        height: 40px;
-                        background-color: burlywood;
-                        margin: 10px 0;
+                        height: 50px;
+                        color: whitesmoke;
+                        cursor: pointer;
+                        border-bottom: 1px solid #555;
+                    }
+                    .option:hover {
+                        background-color: #444;
                     }
                 }
             }
             .part-2 {
                 width: 100%;
                 height: 200px;
-                background-color: violet;
                 top: 40%;
                 .title {
                     left: 50%;
@@ -91,27 +117,74 @@ a {
                     transform: translate(-50% , -50%);
                     width: 90%;
                     height: 20%;
-                    background-color: gold;
                     color: #777;
+                    font-size: 20px;
+                    user-select: none;
                 }
                 .category {
                     width: 100%;
                     height: 72%;
                     bottom: 0;
-                    background-color: goldenrod;
                     .option {
                         width: 100%;
-                        height: 40px;
-                        background-color: burlywood;
-                        margin: 10px 0;
+                        height: 50px;
+                        color: whitesmoke;
+                        border-bottom: 1px solid #555;
+                        cursor: pointer;
+                    }
+                    .option:hover {
+                        background-color: #444;
                     }
                 }
             }
             .part-3 {
                 width: 100%;
                 height: 100px;
-                background-color: blue;
                 top: 80%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                button {
+                    border-radius: 10px;
+                    background-color: rgb(0, 110, 255);
+                    color: #fff;
+                    letter-spacing: .5px;
+                    transition: .5s ease-in-out;
+                    cursor: pointer;
+                }
+                button:hover {
+                    background-color: yellow;
+                    color: #000;
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+@media (max-width: 620px) {
+    .main-section {
+        aside {
+            width: 200px;
+            .user-info {
+                .user-container {
+                    .image {
+                        width: 40px;
+                        height: 40px;
+                    }
+                    .info {
+                        left: 65%;
+                    }
+                }
+            }
+        }
+        .container {
+            header {
+                .logo {
+                    font-size: 25px;
+                }
+                button {
+                    width: 120px;
+                }
             }
         }
     }
